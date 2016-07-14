@@ -11,7 +11,7 @@ public class Coneccion {
    private static Connection con;
    private static String usr = "root";
    private static String pwd = "";
-   private static String host = "127.0.0.1:3306";
+   private static String host = "localhost:8889";
    private static String BD = "alumnos";
    private static String url = "jdbc:mysql://"+host+"/"+BD;
    private static String sql = "com.mysql.jdbc.Driver";
