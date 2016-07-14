@@ -1,21 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bd_project;
 
-/**
- *
- * @author KevDev
- */
+import java.awt.Container;
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+
 public class BD_project {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+    public void ventana(PestañaUno uno,PestañaDos dos,Container c) {
+      JTabbedPane panelConFichas = new JTabbedPane();
+      panelConFichas.addTab("Modificar", null, uno);
+      panelConFichas.addTab("Consultar", null, dos);
+      c.add(panelConFichas);
+   }
+
+   public static void main(String[] args) {
+      BD_project prueba = new BD_project();
+      PestañaUno ps1 = new PestañaUno();
+      PestañaDos ps2 = new PestañaDos();
+      Controlador control = new Controlador(ps1,ps2);
+      JFrame frame = new JFrame("Tarea 4");
+      prueba.ventana(ps1,ps2,frame);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setSize(350, 250);
+      frame.setVisible(true);
+   }
 }
