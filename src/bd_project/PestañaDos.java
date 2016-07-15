@@ -20,7 +20,7 @@ class PestañaDos extends JPanel {
       JScrollPane areares = new JScrollPane(area);
       b1 = new JButton("Ver");
       JLabel lab1 = new JLabel("CURP paciente: ");
-      txt = new JTextField(10);
+      txt = new JTextField(15);
       
       setLayout(new GridBagLayout());
     	GridBagConstraints gc = new GridBagConstraints();

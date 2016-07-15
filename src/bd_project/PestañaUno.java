@@ -15,9 +15,9 @@ class PestañaUno extends JPanel {
    JTextField jtf1,jtf2,jtf3;
 
    public PestañaUno() {
-      jtf1 = new JTextField(8);
-      jtf2 = new JTextField(8);
-      jtf3 = new JTextField(8);
+      jtf1 = new JTextField(15);
+      jtf2 = new JTextField(15);
+      jtf3 = new JTextField(15);
       jlb = new JLabel("Cita");
       jlb1 = new JLabel("Doctor: ");
       jlb2 = new JLabel("Paciente: ");
