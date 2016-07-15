@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 class PestañaUno extends JPanel {
    JLabel jlb, jlb1, jlb2,jlb3,jlb4,jlb5;
    JButton b1;
-   JTextField jtf, jtf1,jtf2,jtf3;
+   JTextField jtf1,jtf2,jtf3;
 
    public PestañaUno() {
       jtf1 = new JTextField(8);
@@ -22,13 +22,16 @@ class PestañaUno extends JPanel {
       jlb1 = new JLabel("Doctor: ");
       jlb2 = new JLabel("Paciente: ");
       jlb3 = new JLabel("Fecha: ");
-      jlb5 = new JLabel("Fecha dd/mm/aaaa");
+      jlb5 = new JLabel("Fecha aaaa-mm-dd  hh:mm:ss");
+      JLabel jlb6 = new JLabel("Modifica la fecha de tu cita");
       b1 = new JButton("Ok");
       jlb5.setFont(new Font("prueba",1,10));
       jlb.setFont(new Font("prueba",1,14));
       setLayout(new GridBagLayout());
       GridBagConstraints gc = new GridBagConstraints();
 
+      
+      
       gc.gridx = 0;
       gc.gridy = 0;
       add(jlb, gc);
@@ -58,6 +61,10 @@ class PestañaUno extends JPanel {
       gc.gridx = 5;
       gc.gridy = 4;
       add(b1, gc);
+      
+      gc.gridx = 1;
+      gc.gridy = 6;
+      add(jlb6, gc);
    }
 
    public void escuchaBotonP1(ActionListener ae) {
