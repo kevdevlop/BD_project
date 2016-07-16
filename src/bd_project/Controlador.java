@@ -2,7 +2,9 @@ package bd_project;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Controlador implements ActionListener {
 
@@ -23,19 +25,23 @@ public class Controlador implements ActionListener {
    @Override
    public void actionPerformed(ActionEvent e) {
       if (e.getActionCommand() == "Ok1") {
-         if (!ps1.jtf1.equals("")) {
-            op.actualizar(Integer.parseInt(ps1.jtf.getText()), ps1.jtf1.getText(), 1);
-         } else if (!ps1.jtf2.equals("")) {
-            op.actualizar(Integer.parseInt(ps1.jtf.getText()), ps1.jtf2.getText(), 2);
-         } else if(!ps1.jtf3.equals("")){
-            op.actualizar(Integer.parseInt(ps1.jtf.getText()), ps1.jtf3.getText(), 3);
-         }
+         if(ps1.jtf1.getText().equals("")||ps1.jtf2.getText().equals("")||ps1.jtf3.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "Completa todos los campos", "Campos Vacios", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                int doctor=Integer.parseInt(ps1.jtf1.getText());
+                String nombre=ps1.jtf2.getText();
+                Timestamp fecha;
+                fecha = Timestamp.valueOf(ps1.jtf3.getText());
+                op.actualizar(doctor, nombre,fecha);
+            }
       } else if (e.getActionCommand() == "Ok2") {
-         ArrayList<Producto> a = new ArrayList();
-         a = op.lista();
-         for (int i = 0; i < a.size(); i++) {
-            ps3.area.append(a.get(i).toString());
-         }
+          String result = "";
+         ArrayList<String> a = new ArrayList();
+         a = op.lista(ps2.txt.getText());
+         
+            result += "Medico: "+a.get(0)+"\nPaciente: "+a.get(1)+"\nFecha: "+ a.get(2);
+         
+         ps2.area.setText(result);
       }
    }
 }
