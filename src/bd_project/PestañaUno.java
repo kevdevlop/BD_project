@@ -21,7 +21,7 @@ class PestañaUno extends JPanel {
       jlb = new JLabel("Modifica la fecha de tu cita");
       jlb1 = new JLabel("Doctor: ");
       jlb2 = new JLabel("Paciente: ");
-      jlb3 = new JLabel("Fecha: ");
+      jlb3 = new JLabel("Fecha a modificar: ");
       jlb5 = new JLabel("Fecha aaaa-mm-dd  hh:mm:ss");
       b1 = new JButton("Ok");
       jlb5.setFont(new Font("prueba",1,10));
