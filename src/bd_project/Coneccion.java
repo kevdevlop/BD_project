@@ -25,9 +25,9 @@ public class Coneccion {
          try {
             Class.forName(sql);
             con = DriverManager.getConnection(url,usr,pwd);
-            JOptionPane.showMessageDialog(null, "Conección exitosa");
+            JOptionPane.showMessageDialog(null, "Conexión exitosa");
          } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Falló la conección");
+            JOptionPane.showMessageDialog(null, "Falló la conexión");
          } catch (ClassNotFoundException ex) {
               Logger.getLogger(Coneccion.class.getName()).log(Level.SEVERE, null, ex);
           }

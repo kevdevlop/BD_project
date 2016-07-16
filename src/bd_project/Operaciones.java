@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -34,7 +33,7 @@ public class Operaciones {
          if (res > 0) {
             JOptionPane.showMessageDialog(null, "La fecha ha sido modificada correctamente");
          } else {
-            JOptionPane.showMessageDialog(null, "numero de empleado desconocido", "Modificar empleado",
+            JOptionPane.showMessageDialog(null, "Médico desconocido", "Modificar Médico",
                 JOptionPane.ERROR_MESSAGE);
          }
       } catch (SQLException e) {
