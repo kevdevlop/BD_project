@@ -18,10 +18,10 @@ public class BD_project {
       PestañaUno ps1 = new PestañaUno();
       PestañaDos ps2 = new PestañaDos();
       Controlador control = new Controlador(ps1,ps2);
-      JFrame frame = new JFrame("Tarea 4");
+      JFrame frame = new JFrame("BD Proyecto");
       prueba.ventana(ps1,ps2,frame);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setSize(450, 400);
+      frame.setSize(450, 300);
       frame.setVisible(true);
    }
 }

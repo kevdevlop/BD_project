@@ -15,15 +15,14 @@ class PestañaUno extends JPanel {
    JTextField jtf1,jtf2,jtf3;
 
    public PestañaUno() {
-      jtf1 = new JTextField(8);
-      jtf2 = new JTextField(8);
-      jtf3 = new JTextField(8);
-      jlb = new JLabel("Cita");
+      jtf1 = new JTextField(12);
+      jtf2 = new JTextField(12);
+      jtf3 = new JTextField(12);
+      jlb = new JLabel("Modifica la fecha de tu cita");
       jlb1 = new JLabel("Doctor: ");
       jlb2 = new JLabel("Paciente: ");
       jlb3 = new JLabel("Fecha: ");
       jlb5 = new JLabel("Fecha aaaa-mm-dd  hh:mm:ss");
-      JLabel jlb6 = new JLabel("Modifica la fecha de tu cita");
       b1 = new JButton("Ok");
       jlb5.setFont(new Font("prueba",1,10));
       jlb.setFont(new Font("prueba",1,14));
@@ -61,10 +60,6 @@ class PestañaUno extends JPanel {
       gc.gridx = 5;
       gc.gridy = 4;
       add(b1, gc);
-      
-      gc.gridx = 1;
-      gc.gridy = 6;
-      add(jlb6, gc);
    }
 
    public void escuchaBotonP1(ActionListener ae) {
