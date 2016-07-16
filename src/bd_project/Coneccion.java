@@ -9,12 +9,12 @@ import java.sql.SQLException;
 
 public class Coneccion {
    private static Connection con;
-   private static String usr = "root";
-   private static String pwd = "root";
-   private static String host = "localhost:8889";
-   private static String BD = "sociedad_medica";
+   private static String usr = "2143030382";
+   private static String pwd = "2143030382";
+   private static String host = "labred.cua.uam.mx";
+   private static String BD = "m2143030382";
    private static String url = "jdbc:mysql://"+host+"/"+BD;
-   private static String sql = "com.mysql.jdbc.Driver";
+   private static String sql = "org.gjt.mm.mysql.Driver";
 
    public Coneccion(){
       con = null;
@@ -28,6 +28,7 @@ public class Coneccion {
             JOptionPane.showMessageDialog(null, "Conección exitosa");
          } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Falló la conección");
+            ex.printStackTrace();
          } catch (ClassNotFoundException ex) {
               Logger.getLogger(Coneccion.class.getName()).log(Level.SEVERE, null, ex);
           }
