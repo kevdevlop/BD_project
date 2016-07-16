@@ -27,9 +27,7 @@ class PestañaUno extends JPanel {
       jlb5.setFont(new Font("prueba",1,10));
       jlb.setFont(new Font("prueba",1,14));
       setLayout(new GridBagLayout());
-      GridBagConstraints gc = new GridBagConstraints();
-
-      
+      GridBagConstraints gc = new GridBagConstraints();      
       
       gc.gridx = 0;
       gc.gridy = 0;
